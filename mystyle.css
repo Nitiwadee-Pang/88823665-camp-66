@@ -1,0 +1,9 @@
+h1{
+    font-size: 20pt;
+    color: rgb(255, 0, 153);
+}
+body{
+    color: blue;
+    background-image: linear-gradient(#ffa0bc ,rgb(247, 192, 255),rgb(253, 253, 186),rgb(192, 192, 251));
+    font-family: "Itim", cursive;
+}
