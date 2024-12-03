@@ -1,9 +1,132 @@
 h1{
-    font-size: 20pt;
-    color: rgb(255, 0, 153);
+    font-size: 40pt;
+    color: #ff00e1;
+
 }
 body{
-    color: blue;
-    background-image: linear-gradient(#ffa0bc ,rgb(247, 192, 255),rgb(253, 253, 186),rgb(192, 192, 251));
+    font-size: 20pt;
+    color: #180076;
     font-family: "Itim", cursive;
+    background-image: linear-gradient(rgb(255, 190, 213),rgb(198, 185, 251));
+    background-size:1200px 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
+button {
+    background-color: #3423d0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: #180076;
+}
+
+button:hover {
+    background-color: #7f41e9;
+}
+input[type="text"], textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: fit-content; 
+    min-width: 150px;
+    transition: all 0.3s ease-in-out;
+}
+input[type="file"], textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 150px;
+    transition: all 0.3s ease-in-out; 
+}
+input[type="dropdown"], textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 150px;
+    transition: all 0.3s ease-in-out; 
+}
+
+input[type="date"], textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 150px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"], textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: fit-content; 
+    min-width: 150px;
+    transition: all 0.3s ease-in-out;
+}
+input[type="text"]:hover, textarea:hover {
+    border-color: #083ba8;
+    background-color: #f3ffca;
+}
+input[type="text"]:focus, textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px #1f4d63;
+    outline: none;
+}
+input[type="number"]:focus, textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px #1f4d63;
+    outline: none;
+}
+input[type="date"]:focus, textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px #1f4d63;
+    outline: none;
+}
+input[type="file"]:focus, textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px #1f4d63;
+    outline: none;
+}
+textarea [rows="4"]:focus, textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px #1f4d63;
+    outline: none;
+}
+select, textarea {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: fit-content; 
+    min-width: 150px; 
+    transition: all 0.3s ease-in-out;
+}
+input[type="date"]:hover, textarea:hover {
+    border-color: #083ba8;
+    background-color:#f3ffca;
+}
+input[type="number"]:hover, textarea:hover {
+    border-color: #083ba8;
+    background-color: #f3ffca;
+}
+input[type="file"]:hover, textarea:hover {
+    border-color: #083ba8;
+    background-color: #f3ffca;
+}
+select:hover, textarea:hover {
+    border-color: #083ba8;
+    background-color: #f3ffca;
+}
+
+
