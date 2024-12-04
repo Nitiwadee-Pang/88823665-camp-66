@@ -1,17 +1,26 @@
 h1{
     font-size: 40pt;
-    color: #ff00e1;
+    color: #e681ff;
 
 }
 body{
+    text-align: center;
     font-size: 20pt;
-    color: #180076;
+    color: #1f087c;
     font-family: "Itim", cursive;
-    background-image: linear-gradient(rgb(255, 190, 213),rgb(198, 185, 251));
-    background-size:1200px 1000px;
-    background-repeat: no-repeat;
-    background-position: center;
-
+    background: url('888.webp') no-repeat; 
+    background-size: 1840px 1160px;
+}
+table{
+    text-align: left;
+    margin: 0 auto;
+    width: 700px 400px;
+    background:transparent;
+    border: 2px solid pink;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 5px 5px pink;
+    border-radius: 10px;
+    padding: 40px 40px;
 }
 button {
     background-color: #3423d0;
@@ -21,11 +30,17 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    box-shadow: #180076;
+}
+#box:hover{
+    border-color: #083ba8;
+    background-color: #fff3a2;
+    box-shadow: 0px 0px 5px 5px pink;
+
 }
 
 button:hover {
     background-color: #7f41e9;
+    box-shadow: 0px 0px 10px 10px #fffca1;
 }
 input[type="text"], textarea {
     font-size: 16px;
@@ -74,35 +89,6 @@ input[type="number"], textarea {
     min-width: 150px;
     transition: all 0.3s ease-in-out;
 }
-input[type="text"]:hover, textarea:hover {
-    border-color: #083ba8;
-    background-color: #f3ffca;
-}
-input[type="text"]:focus, textarea:focus {
-    border-color: #00aaff;
-    box-shadow: 0 0 5px #1f4d63;
-    outline: none;
-}
-input[type="number"]:focus, textarea:focus {
-    border-color: #00aaff;
-    box-shadow: 0 0 5px #1f4d63;
-    outline: none;
-}
-input[type="date"]:focus, textarea:focus {
-    border-color: #00aaff;
-    box-shadow: 0 0 5px #1f4d63;
-    outline: none;
-}
-input[type="file"]:focus, textarea:focus {
-    border-color: #00aaff;
-    box-shadow: 0 0 5px #1f4d63;
-    outline: none;
-}
-textarea [rows="4"]:focus, textarea:focus {
-    border-color: #00aaff;
-    box-shadow: 0 0 5px #1f4d63;
-    outline: none;
-}
 select, textarea {
     font-size: 16px;
     padding: 5px 10px;
@@ -112,21 +98,10 @@ select, textarea {
     min-width: 150px; 
     transition: all 0.3s ease-in-out;
 }
-input[type="date"]:hover, textarea:hover {
-    border-color: #083ba8;
-    background-color:#f3ffca;
-}
-input[type="number"]:hover, textarea:hover {
-    border-color: #083ba8;
-    background-color: #f3ffca;
-}
-input[type="file"]:hover, textarea:hover {
-    border-color: #083ba8;
-    background-color: #f3ffca;
-}
 select:hover, textarea:hover {
     border-color: #083ba8;
-    background-color: #f3ffca;
+    background-color: #fff3a2;
+    box-shadow: 0px 0px 5px 5px pink;
 }
 
 
