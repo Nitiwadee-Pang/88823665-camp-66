@@ -4,79 +4,116 @@
 <head>
     <title>Page Title</title>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-<link rel ="stylesheet" type="text/css"href = "mystyle.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet " />
+    <script src="js/bootstrap.min.js"></script>
 </head>
+
+<style>
+    body {
+        padding-left: 100px;
+    }
+</style>
 
 <body>
     <h1>Workshop #HTML-FROM</h1>
-    <table>
-        <form>
-            <tr>
-                <td><label class="First-name"> ชื่อ</label></td>
-                <td><input type="text" id="box" name="ชื่อ"><br></td>
-            </tr>
-            <tr>
-                <td><label for="Last name"> สกุล</label></td>
-                <td><input type="text" id="box" name="สกุล"><br></td>
-            </tr>
-            <tr>
-                <td><label for="birth"> วัน/เดือน/ปีเกิด</label></td>
-                <td><input type="date" id="box" name="วัน/เดือน/ปีเกิด"><br>
-            </tr>
-            </td>
-            <tr>
-                <td><label for="age"> อายุ</label></td>
-                <td><input type="number" id="box" name="อายุ"><br></td>
-            </tr>
-            <tr>
-                <td><label for="sex"> เพศ</label></td>
-                <td><input type="radio" id="box" name="เพศ">ชาย<input type="radio" id="box" name="เพศ">หญิง<br></td>
-            </tr>
-            <tr>
-                <td><label for="image"> รูป</label></td>
-                <td><input type="file" id="box" name="รูป"><br></td>
-            </tr>
-            <tr>
-                <td><label for="address"> ที่อยู่</label></td>
-                <td><textarea rows="4" cols="40"></textarea><br></td>
-            </tr>
-            <tr>
-                <td><label for="color"> สีที่ชอบ</label></td>
-                <td>
-                    <select id="box" name="dropdown">
-                        <option value="red">สีแดง</option>
-                        <option value="green">สีเขียว</option>
-                        <option value="yellow">สีเหลือง</option>
-                        <option value="blue">สีฟ้า</option>
-                        <option value="purple">สีม่วง</option>
-                        <option value="orange">สีส้ม</option>
-                        <option value="pink">สีชมพู</option>
-                        <option value="gray">สีเทา</option>
-                        <option value="black">สีดำ</option>
-                        <option value="white">สีขาว</option>
-                    </select>
-                    <br>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="song"> เพลงที่ชอบ</label></td>
-                <td><input type="radio" id="box" name="เพื่อชีวิต">เพื่อชีวิต<input type="radio" id="box"
-                        name="ลูกทุ่ง">ลูกทุ่ง<input type="radio" id="box" name="อื่นๆ">อื่นๆ<br>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" id="box" name="สีที่ชอบ">ยินยอมให้เก็บข้อมูล<br></td>
-            </tr>
-        
-            <tr>
-                <td><button type="reset">Reset</button></td>
-                <td><button type="submit">Submit</button><br></td>
-            </tr>
-        </form>
-    </table>
+
+    <form>
+        <div class="row mb-3">
+            <label for="name" class="col-sm-2 col-form-label">ชื่อ</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="name" placeholder="ชื่อ">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="name2" class="col-sm-2 col-form-label">สกุล</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="name2" placeholder="สกุล">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="date" class="col-sm-2 col-form-label">วัน/เดือน/ปีเกิด</label>
+            <div class="col-sm-8">
+                <input type="date" class="form-control" id="date">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="age" class="col-sm-2 col-form-label">อายุ</label>
+            <div class="col-sm-8">
+                <input type="number" class="form-control" id="age">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="sex" class="col-sm-2 col-form-label">เพศ</label>
+            <div class="col-sm-8">
+                <input type="radio" id="box" name="เพศ"> ชาย<br>
+                <input type="radio" id="box" name="เพศ"> หญิง
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="img" class="col-sm-2 col-form-label">รูป</label>
+            <div class="col-sm-8">
+                <input type="file" class="form-control" id="img">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="address" class="col-sm-2 col-form-label">ที่อยู่</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="4" cols="80"></textarea>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="color" class="col-sm-2 col-form-label">สีที่ชอบ</label>
+            <div class="col-sm-8">
+                <select class="form-select" aria-label="Default select example">
+                    <option value="red">สีแดง</option>
+                    <option value="green">สีเขียว</option>
+                    <option value="yellow">สีเหลือง</option>
+                    <option value="blue">สีฟ้า</option>
+                    <option value="purple">สีม่วง</option>
+                    <option value="orange">สีส้ม</option>
+                    <option value="pink">สีชมพู</option>
+                    <option value="gray">สีเทา</option>
+                    <option value="black">สีดำ</option>
+                    <option value="white">สีขาว</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="song" class="col-sm-2 col-form-label">เพลงที่ชอบ</label>
+            <div class="col-sm-8">
+                <input type="radio" id="box" name="เพลงที่ชอบ"> เพื่อชีวิต<br>
+                <input type="radio" id="box" name="เพลงที่ชอบ"> ลูกทุ่ง<br>
+                <input type="radio" id="box" name="เพลงที่ชอบ"> อื่นๆ
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    ยินยอมให้เก็บข้อมูล
+                </label>
+            </div>
+        </div>
+
+        <style>
+            .button-group button {
+                margin-right: 650px
+            }
+        </style>
+        <div class="button-group">
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+
+    </form>
 
 </body>
 
