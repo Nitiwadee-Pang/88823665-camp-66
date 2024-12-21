@@ -5,6 +5,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(250, 198, 251);
+            color: #6f42c1;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #6f42c1;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .row {
+            margin: 10px 0;
+        }
+        .h2 {
+            font-size: 1.5rem;
+        }
+    </style>
 
 <body>
     <div class="container mt-5">
