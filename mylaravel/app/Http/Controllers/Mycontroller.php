@@ -13,3 +13,4 @@ class Mycontroller extends Controller
         return view('myview',$data);
     }
 }
+ 

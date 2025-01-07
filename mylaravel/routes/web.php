@@ -15,3 +15,4 @@ Route::get("/mycontroller/{id?}",
 Route::post('/mycontroller/{id?}',
 [Mycontroller::class,'myfunction']);
 
+
