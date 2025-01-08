@@ -8,30 +8,47 @@
 </head>
 <style>
         body {
-            background-color: #ffe6f2;
+            background-color:rgb(255, 107, 178);
+        }
+        .container {
+            background:rgb(255, 214, 246);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+        }
+        .table-bordered td:nth-child(1) {
+            color:rgb(209, 0, 198);
+        }
+        .table-bordered td:nth-child(2) {
+            color:rgb(255, 0, 162);
+        }
+        .table-bordered td:nth-child(3) {
+            color:rgb(209, 0, 198);
         }
         h1 {
             color: #ff4da6;
         }
         .btn-primary {
-            background-color: #ff66b2;
+            background-color:rgb(2, 2, 2);
             border-color: #ff66b2;
         }
         .btn-primary:hover {
-            background-color:rgb(204, 51, 255);
+            background-color:rgb(255, 51, 177);
             border-color: #ff3399;
-            box-shadow: 0px 0px 5px 5px rgb(92, 169, 250);
+            box-shadow: 0px 0px 5px 5px rgb(30, 1, 21);
         }
         .table-bordered {
-            border-color: #ff99cc;
+            border-color:rgb(27, 1, 14);
+            
         }
         .text-center {
             color: #cc0066;
         }
-        .table-pink {
-        background-color: #ffb3d9 !important; /* บังคับให้เปลี่ยนเป็นสีชมพู */
-        color: white !important; /* บังคับให้ข้อความเป็นสีขาว */
-    }
+        .table-dark{
+            background-color: #ff3399 !important;
+        }
     </style>
 <body>
     <div class="container mt-5">
@@ -49,7 +66,7 @@
                 $number = $_POST['myinput'];
                 echo "<h2 class='text-center'>ตารางสูตรคูณแม่ $number</h2>";
                 echo "<table class='table table-bordered mt-3'>";
-                echo "<thead class='table-pink'>
+                echo "<thead class='table table-dark'>
                         <tr>
                             <th>การคำนวณ</th>
                             <th>=</th>
