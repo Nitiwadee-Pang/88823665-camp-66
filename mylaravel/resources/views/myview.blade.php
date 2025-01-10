@@ -6,8 +6,8 @@
     <title>แม่สูตรคูณ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class="bg-light">
-    <div class="container mt-5 p-4 bg-pink rounded shadow-lg">
+<body class="bg-danger-subtle">
+    <div class="container mt-5 p-4 bg-light rounded shadow-lg">
         <h1 class="text-center mb-4 text-danger">แม่สูตรคูณ</h1>
         <form action="{{url('/mycontroller')}}" method="post" class="text-center">
             @csrf
