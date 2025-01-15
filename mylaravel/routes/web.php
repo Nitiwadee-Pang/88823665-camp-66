@@ -21,5 +21,9 @@ Route ::get('/',function(){
     return view('layouts.default');
 });
 
+Route ::get('/home',function(){
+    return view('home');
+});
+
 Route ::get('/login',[LoginController::class,'index']);
 Route ::get('/register',[RegisterController::class,'register']);
