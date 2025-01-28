@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mycontroller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +29,5 @@ Route ::get('/home',function(){
 
 Route ::get('/login',[LoginController::class,'index']);
 Route ::get('/register',[RegisterController::class,'register']);
+Route ::post('/register',[RegisterController::class,'create']);
+Route ::get('/user',[UserController::class,'index']); 

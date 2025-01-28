@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
+    protected $fillable = [//เพิ่มข้อมูล
         'name',
         'email',
         'password',
@@ -28,9 +28,9 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $hidden = [
+    protected $hidden = [//ดึงข้อมูลมาแสดง ซ่อนรหัส
         'password',
-        'remember_token',
+        'remember_token',//remember me ไหม
     ];
 
     /**
