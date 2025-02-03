@@ -31,3 +31,6 @@ Route ::get('/login',[LoginController::class,'index']);
 Route ::get('/register',[RegisterController::class,'register']);
 Route ::post('/register',[RegisterController::class,'create']);
 Route ::get('/user',[UserController::class,'index']); 
+Route ::get('/user/{id}',[UserController::class,'edit']);
+Route ::put ('/user',[UserController::class,'saveEdit']);
+Route ::delete ('/user',[UserController::class,'delete']);

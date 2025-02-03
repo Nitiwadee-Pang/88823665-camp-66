@@ -8,8 +8,25 @@ class UserController extends Controller
 {
     
     function index(){
-        $user = User::all();
-        return view('User',['user'=>$user]);
+        $users = User::all();
+        return view('User',['users'=>$users]);
+    }
+    function edit($id){
+        $user = User::find($id);
+        return view('editUser',['user'=>$user]);
+    }
+    function saveEdit(Request $req){
+        $user = User::find($req->id);
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->password = ($req->password)==null?$user->password:$req->password;
+        $user->save();
+        return redirect('user');
+    }
+    function delete(Request $req){
+        $user = User::find($req->id);
+        $user->delete();
+        return redirect('/user');
     }
 }
 
