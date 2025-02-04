@@ -686,8 +686,8 @@
                       <thead>
                         <tr>
                           <th style="width: 10px">#</th>
-                          <th>Task</th>
-                          <th>Progress</th>
+                          <th>name</th>
+                          <th>email</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -697,6 +697,7 @@
                         <tr class="align-middle">
                           <td>{{$index + 1}}</td>
                           <td>{{$user -> name}}</td>
+                          <td>{{$user ->email}}</td>
                           <td class="text-end">
                             <a href="{{url('/user/'.$user -> id)}}"> <button class="btn btn-warning"> edit </button></a>
                             <form action="{{url('/user')}}" method="post" style="display:inline"> 

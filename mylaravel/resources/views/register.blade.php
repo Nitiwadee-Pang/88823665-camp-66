@@ -13,15 +13,15 @@
         <form action="{{ url('/register')}}" method="post">
           @csrf
           <div class="input-group mb-3">
-            <input type="text" name="name" class="form-control" placeholder="Full Name" />
+            <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
             <div class="input-group-text"><span class="bi bi-person"></span></div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" name="email" class="form-control" placeholder="Email" />
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" name="password" class="form-control" placeholder="Password" />
+            <input type="password" name="password" id="pass" class="form-control" placeholder="Password" />
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
           </div>
           <!--begin::Row-->
@@ -44,6 +44,7 @@
           </div>
           <!--end::Row-->
         </form>
+        <button type="button" class="btn" onclick="clickme()">TEST.JS</button>
         <!-- /.social-auth-links -->
         <p class="mb-0">
           <a href="login.html" class="text-center"> I already have a membership </a>
@@ -53,4 +54,26 @@
     </div>
   </div>
 </div>
+  @endsection
+
+  @section('scripts')
+  <script>
+    console.log('Hello world')
+    //ALERT('Hello worl')
+  </script>
+  <script>
+  alert('Hello world')
+
+  let myval
+  var myval2
+  const PI = 3.14
+
+  pt= 2
+  console.log(PI,pi)
+function clickme(){
+  let name = document.getElementByID('name')
+console.log("Hello",name.value)
+return false;
+}
+  </script>
   @endsection
