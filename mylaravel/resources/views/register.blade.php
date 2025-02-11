@@ -10,19 +10,25 @@
     <div class="card">
       <div class="card-body register-card-body">
         <p class="register-box-msg">Register a new membership</p>
-        <form action="{{ url('/register')}}" method="post">
+        <form action="{{ url('/register')}}"onsubmit = "return allcheck(event)" method="post">
           @csrf
           <div class="input-group mb-3">
-            <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
+            <input type="text" name="name" id="name" class="form-control" placeholder="Full Name"  oninput="checkName()"/>
             <div class="input-group-text"><span class="bi bi-person"></span></div>
+            <div class="valid-feedback">ถูกต้อง</div>
+            <div class="invalid-feedback">กรุณากรอกข้อมูล ชื่อ-สกุล</div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email" oninput="checkEmail()"/>
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+            <div class="valid-feedback">ถูกต้อง</div>
+            <div class="invalid-feedback">กรุณากรอกข้อมูล ชื่อ-สกุล</div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" name="password" id="pass" class="form-control" placeholder="Password" />
+            <input type="password" name="password" id="pass" class="form-control" placeholder="Password" oninput="checkPassword()"/>
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+            <div class="valid-feedback">ถูกต้อง</div>
+            <div class="invalid-feedback">กรุณากรอกข้อมูล ชื่อ-สกุล</div>
           </div>
           <!--begin::Row-->
           <div class="row">
@@ -44,7 +50,7 @@
           </div>
           <!--end::Row-->
         </form>
-        <button type="button" class="btn" onclick="clickme()">TEST.JS</button>
+       
         <!-- /.social-auth-links -->
         <p class="mb-0">
           <a href="login.html" class="text-center"> I already have a membership </a>
@@ -57,23 +63,56 @@
   @endsection
 
   @section('scripts')
-  <script>
-    console.log('Hello world')
-    //ALERT('Hello worl')
-  </script>
-  <script>
-  alert('Hello world')
+<script>  
 
-  let myval
-  var myval2
-  const PI = 3.14
-
-  pt= 2
-  console.log(PI,pi)
-function clickme(){
-  let name = document.getElementByID('name')
-console.log("Hello",name.value)
-return false;
-}
-  </script>
-  @endsection
+function checkName() {  
+    let name = $('#name').val().trim(); 
+    if (name !== "" && name.length>=3) {
+        $('#name').removeClass('is-invalid').addClass('is-valid'); 
+        return true;
+    } else {
+        $('#name').removeClass('is-valid').addClass('is-invalid'); 
+        return false;
+    }
+  }
+    function checkEmail() {
+    let email = $('#email').val(); 
+    let emailcorrect = /^[a-zA-Z0-9+-_%.]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,}$/;
+    if (emailcorrect.test(email)) {
+          $('#email').removeClass('is-invalid').addClass('is-valid'); 
+          return true;
+    } else {
+        $('#email').removeClass('is-valid').addClass('is-invalid'); 
+        return false;
+    }
+  }
+    function checkPassword() {
+    let passwordcorrect = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])[a-zA-Z0-9+-_%.]{8,}$/;
+    let password = $('#pass').val(); 
+    if (passwordcorrect.test(password)) {
+        $('#pass').removeClass('is-invalid').addClass('is-valid'); 
+        return true;
+    } else {
+        $('#pass').removeClass('is-valid').addClass('is-invalid'); 
+        return false;
+    }
+  }
+    function allcheck(event){
+      event.preventDefault();
+      let checkbox = document.getElementById("flexCheckDefault").checked;
+     let confirm =  checkName() &&checkEmail() &&checkPassword() && checkbox ;
+     let nametitle = confirm ? "Success" : "Error",
+         nametext = !checkName()?"please input name ":!checkEmail()?"please input email ":!checkPassword()?"please input password ":confirm ? "thank you for register" : "please verify all",
+         typeicon = confirm ? "success" : "error";
+      swal.fire({
+        title:nametitle,
+        text : nametext,
+        icon:typeicon
+      })
+     if(confirm){
+      event.target.submit();
+     }
+    }
+  
+</script>
+@endsection

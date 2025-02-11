@@ -700,7 +700,7 @@
                           <td>{{$user ->email}}</td>
                           <td class="text-end">
                             <a href="{{url('/user/'.$user -> id)}}"> <button class="btn btn-warning"> edit </button></a>
-                            <form action="{{url('/user')}}" method="post" style="display:inline"> 
+                            <form action="{{url('/user')}}" onsubmit = "return clickme(event)" method="post" style="display:inline"> 
                                 @csrf
                                 @method('delete')
                                 <input type="hidden" name="id" value="{{$user -> id}}">
@@ -740,6 +740,34 @@
     <!--end::App Wrapper-->
     <!--begin::Script-->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    @section('scripts')
+
+    <script>
+     
+          
+     function clickme(event) {
+      event.preventDefault(); 
+  
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          event.target.submit(); 
+        }
+      });
+  
+      return false; 
+    }
+  
+          
+        </script>
+        @endsection
     <script
       src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
       integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
