@@ -5,7 +5,8 @@ use App\Http\Controllers\Mycontroller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\ProductController;
+use App\Http\Middleware\CheckLogin;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,9 +29,13 @@ Route ::get('/home',function(){
 });
 
 Route ::get('/login',[LoginController::class,'index']);
+Route ::post('/login',[LoginController::class,'login']);
 Route ::get('/register',[RegisterController::class,'register']);
 Route ::post('/register',[RegisterController::class,'create']);
 Route ::get('/user',[UserController::class,'index']); 
 Route ::get('/user/{id}',[UserController::class,'edit']);
+Route ::get('/home',[UserController::class,'home']);
 Route ::put ('/user',[UserController::class,'saveEdit']);
 Route ::delete ('/user',[UserController::class,'delete']);
+Route ::get('/product',[ProductController::class,'index'])->middleware([CheckLogin::class]);
+Route ::post('/product',[ProductController::class,'store'])->middleware([CheckLogin::class]);
