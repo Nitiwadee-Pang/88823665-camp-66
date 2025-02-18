@@ -24,6 +24,7 @@ Route::post('/mycontroller/{id?}',
 Route ::get('/',function(){
     return view('layouts.default');
 });
+Route ::get('/',[HomeController::class,'home'])->middleware([CheckLogin::class]);
 
 Route ::get('/home',function(){
     return view('home');
