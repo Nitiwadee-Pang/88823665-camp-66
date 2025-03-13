@@ -6,9 +6,30 @@
     <title>Login Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </head>
 <style>
-  
+    body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('/88823665-camp-66/login.jpg') no-repeat center center/cover;
+        }
+.bgLogin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+}
+
 .login-box {
     background: rgba(255, 255, 255, 0.7);
     padding: 2rem;
@@ -16,6 +37,7 @@
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     width: 24rem;
+    margin: 30px;
 }
 
 /* สไตล์ของ Label */
@@ -55,7 +77,7 @@
 /* Forgot Password Link */
 .forgot-password {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: #3C3C3C;
 
     transition: color 0.2s;
 }
@@ -87,7 +109,7 @@
 
 .line {
     flex-grow: 1;
-    border-top: 1px solid #d1d5db;
+    border-top: 3px solid #D9D9D9;
 }
 
 .or-text {
@@ -105,6 +127,8 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
     transition: background 0.2s;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .google-btn:hover {
@@ -115,13 +139,23 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.75rem;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+   
+    
 }
+.iconLogo {
+    width: 269px;
+        height: 132px;
+        margin-bottom: 10px;
+        align-items: center;
+    
+    }
+
 
 </style>
 <body class="flex items-center justify-center min-h-screen" >
-    <img src="/Applications/XAMPP/xamppfiles/htdocs/88823665-camp-66/login.jpg" alt="">
-    <div class="login-box">
+    <div><img src="/88823665-camp-66/my order.png" class="iconLogo" alt="">
+    <div class="login-box" >
+    
         <h2 class="text-2xl font-bold text-center">Login</h2>
 
         <form class="mt-4">
@@ -140,13 +174,16 @@
                 <hr class="line">
                 <span class="or-text">OR</span>
                 <hr class="line">
+                <span class="or-text">OR</span>
+                <hr class="line">
             </div>
 
             <button class="google-btn">
-                <img src="https://www.google.com/imgres?q=login%20with%20google%20logo&imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F937%2F156%2Fpng-transparent-google-logo-google-search-google-account-redes-search-engine-optimization-text-service-thumbnail.png&imgrefurl=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3Dgoogle%2BAccount&docid=dfljTXCHCwVsNM&tbnid=GO4v_Lbi9z93zM&vet=12ahUKEwiLr9OXmoaMAxV2zDgGHfQFOoEQM3oECH8QAA..i&w=360&h=360&hcb=2&ved=2ahUKEwiLr9OXmoaMAxV2zDgGHfQFOoEQM3oECH8QAA" class="google-icon">
-                Log in with Google
+                <img src="/88823665-camp-66/login.png" class="google-icon">
+                Login with Google
             </button>
         </form>
     </div>
+</div>
 </body>
 </html>

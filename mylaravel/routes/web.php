@@ -55,3 +55,6 @@ Route ::post('/product',[ProductController::class,'store'])->middleware([CheckLo
 Route::get('/loginOSSD', function () {
     return view('/loginOSSD');
 });
+Route::get('/menubar', function () {
+    return view('/menubar');
+});
