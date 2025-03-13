@@ -52,3 +52,6 @@ Route ::post('/home',[HomeController::class,'home'])->middleware([CheckLogin::cl
 
 Route ::get('/product',[ProductController::class,'index'])->middleware([CheckLogin::class]);
 Route ::post('/product',[ProductController::class,'store'])->middleware([CheckLogin::class]);
+Route::get('/loginOSSD', function () {
+    return view('/loginOSSD');
+});
