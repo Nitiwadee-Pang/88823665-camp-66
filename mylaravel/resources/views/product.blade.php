@@ -692,7 +692,7 @@
                 <div class="row" id='add-product'>
         
                 </div>
-                <div class="mt-3 row">
+                <div class="mt-3 col-3">
                     <button class="btn btn-success" type="submit">บันทึก</button>
                 </div>
             </form>
@@ -703,7 +703,10 @@
                         <td>Category Name</td>
                         <td>Product Name</td>
                         <td>User Name</td>
+                        <td>การกระทำ</td>
+
                     </tr>
+
                 </thead>
                 <tbody>
                     <?php foreach ($categorys as $index => $category) {?>
@@ -720,6 +723,12 @@
                                 <?php } ?>
                             </td>
                             <td>{{$name->name}}</td>
+                            <td>
+                              <button>แก้ไข</button>
+                              
+                              <button>ลบ</button>
+
+                            </td>
                         </tr>
                         <?php }?>
                 </tbody>

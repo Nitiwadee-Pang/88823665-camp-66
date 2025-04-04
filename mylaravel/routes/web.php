@@ -58,3 +58,5 @@ Route::get('/loginOSSD', function () {
 Route::get('/menubar', function () {
     return view('/menubar');
 });
+Route::delete('/product/{id}', [ProductController::class, 'delete'])->name('product.delete');
+
